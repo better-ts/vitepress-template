@@ -1,0 +1,42 @@
+version: "3"
+
+#
+# sub namespace: https://taskfile.dev/#/usage?id=including-other-taskfiles
+#
+includes:
+  landing:
+    aliases: ["l", "lp"]
+    taskfile: packages/landing-page
+    dir: packages/landing-page
+    optional: true
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+
+# global env:
+env:
+  ENV1: testing
+
+
+################################################################################################
+
+tasks:
+  default:
+    cmds:
+      - echo "hello world"
+
+  add:
+    aliases: [ "a" ]
+    cmds:
+      - bun add -D vitepress
+      - bun add -D open-cli
+      - bun add -D @lunariajs/core
+      - bun add -D markdown-it-mathjax3
+
+  run:
+    aliases: [ "r" ]
+    cmds:
+      - bun run docs:dev
