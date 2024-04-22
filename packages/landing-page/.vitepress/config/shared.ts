@@ -61,6 +61,8 @@ export const shared = defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/better-try' },
       { icon: 'twitter', link: 'https://twitter.com/trybetterapp' },
+      { icon: 'discord', link: 'https://github.com/better-try' },
+      { icon: 'youtube', link: 'https://youtube.com/@trybetterapp' },
     ],
 
 

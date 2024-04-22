@@ -3,23 +3,24 @@
 layout: home
 
 hero:
-  name: "我的很棒的项目"
-  text: "一个 VitePress 网站"
-  tagline: 我的很棒的项目 tagline
-  actions:
-    - theme: brand
-      text: Markdown 示例
-      link: /markdown-examples
-    - theme: alt
-      text: API 示例
-      link: /api-examples
+  name: "尝试更好的应用&产品"
+  #  text: "trybetter.app 只出精品"
+  tagline: "专注开发精品, 为用户提供更好的体验"
+
 
 features:
-  - title: 特性 A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 👛️
+    title: 极客钱包
+    details: 一个很棒的钱包 App, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product1'
+  - icon: ⏰
+    title: 极客闹钟
+    details: 一个很棒的闹钟 App, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product2'
+  - icon: 🛠️
+    title: 签证助手
+    details: 美国签证助手, 可以帮助你快速完成签证, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product3'
+
 ---
 

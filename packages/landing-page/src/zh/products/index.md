@@ -3,20 +3,23 @@
 layout: home
 
 hero:
-  name: "我开发的很棒的产品"
+  name: "尝试更好的应用&产品"
+  tagline: '比你想象的更好的应用'
 
-  tagline: My great project tagline
 
 features:
-  - icon: ⚡️
-    title: 产品 1
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: 产品 2
-    details: Lorem ipsum...
+  - icon: 👛️
+    title: 极客钱包
+    details: 一个很棒的钱包 App, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product1'
+  - icon: ⏰
+    title: 极客闹钟
+    details: 一个很棒的闹钟 App, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product2'
   - icon: 🛠️
-    title: 产品 3
-    details: Lorem ipsum...
-    
+    title: 签证助手
+    details: 美国签证助手, 可以帮助你快速完成签证, 跨平台(Windows/macOS/Linux)
+    link: '/zh/products/product3'
+
 ---
 

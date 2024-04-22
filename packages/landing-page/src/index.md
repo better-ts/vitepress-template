@@ -3,27 +3,24 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+  name: "My Awesome Products"
+#  text: "A VitePress Site"
+#  tagline: My great project tagline
+
 
 features:
-  - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
-  - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
+  - icon: 👛️
+    title: Geek Wallet
+    details: Awesome Wallet Application
+    link: '/products/index'
+  - icon: ⏰
+    title: Geek Clock
+    details: Awesome Clock Application
+    link: '/products/index'
   - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
-    
+    title: Visa Pal
+    details: Awesome USA Visa Application
+    link: '/products/index'
+
 ---
 
