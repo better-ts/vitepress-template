@@ -1,8 +1,11 @@
 {
+  "type": "module",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "build": "vitepress build",
+    "dev": "vitepress dev",
+    "lunaria:build": "lunaria build",
+    "lunaria:open": "open-cli .vitepress/dist/_translations/index.html",
+    "preview": "vitepress preview"
   },
   "devDependencies": {
     "@lunariajs/core": "^0.0.32",

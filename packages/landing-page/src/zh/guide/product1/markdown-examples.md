@@ -1,8 +1,8 @@
-# Markdown 插件示例
+# Markdown Extension Examples
 
 This page demonstrates some of the built-in markdown extensions provided by VitePress.
 
-## 语法高亮
+## Syntax Highlighting
 
 VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
 

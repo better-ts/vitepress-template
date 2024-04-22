@@ -39,4 +39,4 @@ tasks:
   run:
     aliases: [ "r" ]
     cmds:
-      - bun run docs:dev
+      - bun run dev
