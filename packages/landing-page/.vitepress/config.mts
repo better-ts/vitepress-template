@@ -2,10 +2,12 @@ import {defineConfig} from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "TryBetterApp",
+  description: "try better app",
 
-
+  lastUpdated: true,
+  cleanUrls: true,
+  metaChunk: true,
   //
   // todo x: https://vitepress.dev/zh/reference/site-config#srcdir
   //
@@ -34,13 +36,28 @@ export default defineConfig({
 
 
   themeConfig: {
+    //
+    // todo x: 导航栏
     // https://vitepress.dev/reference/default-theme-config
+    //
     nav: [
       {text: 'Home', link: '/'},
-      {text: 'Examples', link: '/markdown-examples'}
+      {text: 'Products', link: '/products/index'},
+      {text: 'Guide', link: '/guide/markdown-examples'},
     ],
 
+
+    //
+    // todo x: 侧边栏
+    //
     sidebar: [
+      {
+        text: 'Guide',
+        items: [
+          {text: 'Markdown Examples', link: '/markdown-examples'},
+          {text: 'Runtime API Examples', link: '/api-examples'}
+        ]
+      },
       {
         text: 'Examples',
         items: [
@@ -50,9 +67,16 @@ export default defineConfig({
       }
     ],
 
+    //
+    // todo x: 页脚
+    //
+    footer: {
+      // message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2024-present TryBetterApp.'
+    },
 
     //
-    // 社交账号:
+    // todo x: 社交账号
     //
     socialLinks: [
       {icon: 'github', link: 'https://github.com/better-try'},
