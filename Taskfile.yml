@@ -1,0 +1,105 @@
+version: "3"
+
+#
+# sub namespace: https://taskfile.dev/#/usage?id=including-other-taskfiles
+#
+includes:
+  landing:
+    aliases: ["l", "lp"]
+    taskfile: packages/landing-page
+    dir: packages/landing-page
+    optional: true
+
+#
+# global vars: https://taskfile.dev/#/usage?id=variables
+#
+vars:
+  VAR1: "some-var"
+
+# global env:
+env:
+  ENV1: testing
+
+# env file:
+dotenv:
+  - .env
+
+################################################################################################
+
+tasks:
+  default:
+    cmds:
+      - echo "hello world"
+
+  install:
+    aliases: [ "i" ]
+    cmds:
+      - task: install:bun
+
+  install:bun:
+    cmds:
+      - curl -fsSL https://bun.sh/install | bash
+
+  install:vitepress:
+    aliases: [ "iv" ]
+    cmds:
+#      - pnpm add -D vitepress
+#      - yarn add -D vitepress
+#      - npm install -g vitepress
+      - bun add -D vitepress
+
+  env:
+    aliases: [ "e" ]
+    cmds:
+      - bun -v
+
+  new:
+    aliases: [ "n" ]
+    cmds:
+      - mkdir -p {{.CLI_ARGS}}
+      - |
+        cd {{.CLI_ARGS}}
+        bun vitepress init
+    dir: packages/
+
+  count:
+    cmds:
+      - tokei # 代码统计: https://github.com/XAMPPRocky/tokei
+
+
+  ################################################################################
+
+  pull:
+    aliases: [ "pl" ]
+    cmds:
+      - git config pull.rebase false
+      - git pull origin main
+
+  fetch:
+    aliases: [ "f" ]
+    cmds:
+      - git fetch
+      - git rebase
+      - git merge origin/main
+
+  quick:
+    aliases: [ "q" ]
+    cmds:
+      - task: commit
+      - task: commit
+      #      - task: pull
+      - task: push
+
+  commit:
+    aliases: [ "c" ]
+    cmds:
+      - git add .
+      - |
+        git commit -m 'chore: update' --no-verify
+    ignore_error: true
+
+  push:
+    aliases: [ "p" ]
+    cmds:
+      - git push origin main --tags
+      - repo_url=`git remote -v | grep push | awk -F ":" '{print $2}' | awk -F ".git" '{print "https://github.com/"$1}'`; open $repo_url
