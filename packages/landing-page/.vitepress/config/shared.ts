@@ -7,6 +7,11 @@ export const shared = defineConfig({
   title: "TryBetterApp",
   description: "try better app",
 
+  //
+  // todo x: github pages 部署方式, 设置为 repo name
+  //  - 坑: 必须以 / 开头 + 结尾
+  //
+  base: '/vitepress-template/',
 
   //
   // todo x: 入口
