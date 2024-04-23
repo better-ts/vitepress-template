@@ -28,6 +28,11 @@ tasks:
     cmds:
       - echo "hello world"
 
+  install:
+    aliases: [ "i" ]
+    cmds:
+      - bun install
+
   add:
     aliases: [ "a" ]
     cmds:
