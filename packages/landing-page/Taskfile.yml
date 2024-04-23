@@ -72,6 +72,14 @@ tasks:
       - task: build
       - task: deploy
 
+  clean:
+    aliases: [ "cl", "rm" ]
+    cmds:
+      - rm -rf cache/
+      - rm -rf dist/
+    dir: .vitepress/
+
+
   echo:
     cmds:
       - echo "deploy to {{ .GIT_REPO }} gh-pages"
